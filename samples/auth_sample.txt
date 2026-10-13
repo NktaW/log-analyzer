@@ -1,0 +1,12 @@
+2026-10-09T03:12:44.118402+00:00 demo-server sshd[2101]: Failed password for invalid user admin from 203.0.113.45 port 52344 ssh2
+2026-10-09T03:12:48.552910+00:00 demo-server sshd[2101]: Failed password for invalid user admin from 203.0.113.45 port 52344 ssh2
+2026-10-09T03:12:52.903447+00:00 demo-server sshd[2103]: Failed password for root from 203.0.113.45 port 52350 ssh2
+2026-10-09T14:05:30.220118+00:00 demo-server sshd[2110]: Failed password for invalid user test from 198.51.100.23 port 40122 ssh2
+2026-10-10T08:41:02.774501+00:00 demo-server sshd[2115]: Accepted publickey for alice from 192.0.2.10 port 51000 ssh2
+2026-10-10T08:41:02.780233+00:00 demo-server sshd[2115]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-10-10T08:43:45.031876+00:00 demo-server sudo:    alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/apt update
+2026-10-10T19:20:12.440019+00:00 demo-server sshd[2130]: Failed password for invalid user oracle from 198.51.100.23 port 40188 ssh2
+2026-10-10T23:59:55.665302+00:00 demo-server sshd[2134]: Failed password for bob from 192.0.2.77 port 49210 ssh2
+2026-10-11T00:00:03.009871+00:00 demo-server sshd[2134]: Accepted password for bob from 192.0.2.77 port 49210 ssh2
+2026-10-11T06:30:44.871200+00:00 demo-server sshd[2140]: Failed password for invalid user admin from 203.0.113.45 port 52401 ssh2
+2026-10-11T06:31:10.300456+00:00 demo-server CRON[2150]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
