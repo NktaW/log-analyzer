@@ -2,8 +2,6 @@
 
 import sys
 
-LOG_FILE = "/var/log/auth.log"
-
 
 def read_lines(path):
     """Read a log file and return its lines."""
@@ -20,8 +18,13 @@ def read_lines(path):
 
 def main():
     """Run the log analysis."""
-    lines = read_lines(LOG_FILE)
-    print(f"Read {len(lines)} lines from {LOG_FILE}")
+    if len(sys.argv) != 2:
+        print("Usage: python log_analyzer.py <log_file>", file=sys.stderr)
+        sys.exit(2)
+
+    log_file = sys.argv[1]
+    lines = read_lines(log_file)
+    print(f"Read {len(lines)} lines from {log_file}")
 
 
 if __name__ == "__main__":
