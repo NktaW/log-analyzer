@@ -16,6 +16,14 @@ def read_lines(path):
         sys.exit(1)
 
 
+def is_failed_login(line):
+    """Return True if the line is a failed SSH password attempt."""
+    if ": " not in line:
+        return False
+    header, message = line.split(": ", 1)
+    return " sshd[" in header and message.startswith("Failed password for ")
+
+
 def main():
     """Run the log analysis."""
     if len(sys.argv) != 2:
@@ -25,6 +33,11 @@ def main():
     log_file = sys.argv[1]
     lines = read_lines(log_file)
     print(f"Read {len(lines)} lines from {log_file}")
+    failed_lines = []
+    for line in lines:
+        if is_failed_login(line):
+            failed_lines.append(line)
+    print(f"Found {len(failed_lines)} failed login attempts")
 
 
 if __name__ == "__main__":
